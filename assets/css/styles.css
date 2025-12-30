@@ -300,8 +300,10 @@ a:hover { text-decoration: underline; }
 }
 .review {
   padding: 1.15rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.55rem;
+  height: 100%;
 }
 .avatar {
   width: 44px;
@@ -321,7 +323,11 @@ a:hover { text-decoration: underline; }
   font-size: 0.95rem;
 }
 .review .name { font-weight: 800; }
-.review .text { color: var(--muted); margin: 0; }
+.review .text {
+  color: var(--muted);
+  margin: 0;
+  flex: 1 1 auto;
+}
 
 .footer {
   border-top: 1px solid var(--border);
