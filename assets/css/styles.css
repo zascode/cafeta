@@ -60,10 +60,12 @@ a:hover { text-decoration: underline; }
   gap: 0.75rem;
 }
 .brand img {
-  width: 40px;
-  height: 40px;
+  height: 42px;
+  width: auto;
+  max-width: 170px;
   object-fit: contain;
 }
+.brand-logo { display: block; }
 .brand-name {
   font-weight: 700;
   letter-spacing: 0.02em;
