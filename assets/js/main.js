@@ -1,25 +1,23 @@
 (function () {
-  const videoEmbeds = document.querySelectorAll('[data-youtube-id]');
-
-  videoEmbeds.forEach(function (embed) {
-    const button = embed.querySelector('.video-poster');
+  document.addEventListener('click', function (event) {
+    const button = event.target.closest('.video-poster');
     if (!button) return;
 
-    button.addEventListener('click', function () {
-      const videoId = embed.getAttribute('data-youtube-id');
-      const title = embed.getAttribute('data-video-title') || 'YouTube Video';
-      if (!videoId) return;
+    const embed = button.closest('[data-youtube-id]');
+    if (!embed) return;
 
-      const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0';
-      iframe.title = title;
-      iframe.loading = 'lazy';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.allowFullscreen = true;
+    const videoId = embed.getAttribute('data-youtube-id');
+    const title = embed.getAttribute('data-video-title') || 'YouTube Video';
+    if (!videoId) return;
 
-      embed.replaceChildren(iframe);
-      iframe.focus();
-    });
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0';
+    iframe.title = title;
+    iframe.loading = 'lazy';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+
+    embed.replaceChildren(iframe);
   });
 
   // This script keeps the site JS-light by default.
