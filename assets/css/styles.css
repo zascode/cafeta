@@ -179,6 +179,10 @@ a:hover { text-decoration: underline; }
   margin: 0;
   font-size: 1.55rem;
 }
+.section-title.centered {
+  justify-content: center;
+  text-align: center;
+}
 .section-title p {
   margin: 0;
   color: var(--muted);
