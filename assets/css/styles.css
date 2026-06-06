@@ -241,7 +241,7 @@ a:hover { text-decoration: underline; }
   padding: 0.85rem 1.05rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: var(--accent-2);
+  background: #fff;
   color: #000;
   font-weight: 800;
   cursor: pointer;
