@@ -164,7 +164,6 @@ a:hover { text-decoration: underline; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 0.65rem;
-  margin-bottom: 0.75rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   color: var(--muted);
