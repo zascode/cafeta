@@ -1,4 +1,31 @@
 (function () {
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+
+  if (navToggle && nav) {
+    function setMenuOpen(isOpen) {
+      nav.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    }
+
+    navToggle.addEventListener('click', function () {
+      setMenuOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    nav.addEventListener('click', function (event) {
+      if (event.target.closest('a')) setMenuOpen(false);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.contains(event.target) && !navToggle.contains(event.target)) setMenuOpen(false);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') setMenuOpen(false);
+    });
+  }
+
   document.addEventListener('click', function (event) {
     const button = event.target.closest('.video-poster');
     if (!button) return;

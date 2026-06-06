@@ -48,6 +48,7 @@ a:hover { text-decoration: underline; }
   z-index: 10;
 }
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,6 +85,26 @@ a:hover { text-decoration: underline; }
 .nav a:hover {
   background: #f6f6f6;
   text-decoration: none;
+}
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+}
+.nav-toggle-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--fg);
 }
 
 .hero {
@@ -434,6 +455,27 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; }
+  .nav-toggle { display: inline-flex; }
+  .nav {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    display: none;
+    min-width: 220px;
+    padding: 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+  .nav.is-open { display: flex; }
+  .nav a {
+    padding: 0.75rem 0.85rem;
+    border-radius: 10px;
+  }
   .newsletter { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
   .reviews { grid-template-columns: 1fr; }
