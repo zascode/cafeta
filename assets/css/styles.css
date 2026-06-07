@@ -202,6 +202,7 @@ a:hover { text-decoration: underline; }
 }
 .section-title.centered {
   justify-content: center;
+  margin-bottom: 4rem;
   text-align: center;
 }
 .section-title p {
@@ -319,7 +320,7 @@ a:hover { text-decoration: underline; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 0.85rem;
+  gap: 1.4rem;
 }
 .gallery a {
   border-radius: var(--radius);
@@ -345,7 +346,7 @@ a:hover { text-decoration: underline; }
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.4rem;
 }
 .feature {
   padding: 1.25rem;
@@ -369,7 +370,7 @@ a:hover { text-decoration: underline; }
 .reviews {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.4rem;
 }
 .review {
   padding: 1.15rem;
