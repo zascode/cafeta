@@ -228,6 +228,9 @@ a:hover { text-decoration: underline; }
   gap: 1rem;
   align-items: center;
 }
+.newsletter-section {
+  padding-top: calc(2rem + 2mm);
+}
 .newsletter h3 { margin: 0 0 0.35rem; letter-spacing: 0.04em; }
 .newsletter .sub { margin: 0; color: rgba(255,255,255,0.75); }
 .newsletter form {
