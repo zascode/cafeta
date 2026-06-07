@@ -187,7 +187,7 @@ a:hover { text-decoration: underline; }
 }
 
 .section {
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 }
 .section-title {
   display: flex;
@@ -320,13 +320,13 @@ a:hover { text-decoration: underline; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.4rem;
+  gap: 2.5rem;
 }
 .gallery a {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.045);
   display: block;
 }
 .gallery img {
@@ -346,10 +346,11 @@ a:hover { text-decoration: underline; }
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
+  gap: 2rem;
 }
 .feature {
   padding: 1.25rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.045);
 }
 .kicker {
   display: inline-flex;
@@ -370,7 +371,7 @@ a:hover { text-decoration: underline; }
 .reviews {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.4rem;
+  gap: 2rem;
 }
 .review {
   padding: 1.15rem;
@@ -378,6 +379,7 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 0.55rem;
   height: 100%;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.045);
 }
 .avatar {
   width: 44px;
