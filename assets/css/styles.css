@@ -176,6 +176,7 @@ a:hover { text-decoration: underline; }
 .hero-image img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center;
 }
 .card {
   background: #fff;
